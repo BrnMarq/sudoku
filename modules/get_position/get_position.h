@@ -1,0 +1,1 @@
+void get_position(int *col, int *row);
