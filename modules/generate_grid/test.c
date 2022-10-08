@@ -1,5 +1,21 @@
 #include <stdio.h>
-#include <string.h>
+
+#include "generate_grid.h"
+
+void print_grid(int grid[9][9]);
+
+int main() {
+  int grid[9][9] = {{1, 2, 3, 4, 5, 6, 7, 8, 9}, {1, 2, 3, 4, 5, 6, 7, 8, 9},
+                    {1, 2, 3, 4, 5, 6, 7, 8, 9}, {1, 2, 3, 4, 5, 6, 7, 8, 9},
+                    {1, 2, 3, 4, 5, 6, 7, 8, 9}, {1, 2, 3, 4, 5, 6, 7, 8, 9},
+                    {1, 2, 3, 4, 5, 6, 7, 8, 9}, {1, 2, 3, 4, 5, 6, 7, 8, 9},
+                    {1, 2, 3, 4, 5, 6, 7, 8, 9}};
+
+  generate_grid(grid);
+  print_grid(grid);
+
+  return 0;
+}
 
 void print_grid(int grid[9][9]) {
   printf("  ");
