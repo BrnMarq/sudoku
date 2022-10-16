@@ -8,8 +8,8 @@ int main() {
 
   get_position(&col, &row);
 
-  printf("La columna es: %d", col);
-  printf("La fila es: %d", row);
+  printf("\nLa columna es: %d", col);
+  printf("\nLa fila es: %d\n", row);
 
   return 0;
 }

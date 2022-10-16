@@ -3,7 +3,7 @@
 #include "get_solutions.h"
 
 int main() {
-  int test1[9] = {1, 0, 0, 2, 4, 5, 3, 0, 7};
+  int test1[9] = {5, 8, 3, 1, 2, 0, 4, 0, 0};
   // int test2[9] = {1, 0, 0, 2, 4, 5, 3, 0, 7};
   // int test3[9] = {1, 0, 0, 2, 4, 5, 3, 0, 7};
   int *test1solution;
