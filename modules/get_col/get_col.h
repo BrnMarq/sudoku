@@ -1,0 +1,1 @@
+int *get_col(int **grid, int col);

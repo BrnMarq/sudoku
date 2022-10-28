@@ -1,1 +1,1 @@
-int *get_square(int grid[9][9], int col, int row);
+int *get_square(int **grid, int col, int row);

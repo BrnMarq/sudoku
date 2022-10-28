@@ -1,1 +1,1 @@
-void generate_grid(int grid[9][9]);
+void generate_grid(int **grid, int amountToFill);

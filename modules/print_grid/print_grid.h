@@ -1,1 +1,1 @@
-void print_grid(int grid[9][9]);
+void print_grid(int **grid);

@@ -1,15 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int *get_square(int grid[9][9], int col, int row) {
-  static int square[9];
+int *get_square(int **grid, int col, int row) {
+  int *square = (int *)malloc(sizeof(int) * 9);
   int position = 0;
-  int squareCol = (col / 3) * 3;
-  int squareRow = (row / 3) * 3;
-  int numbersPerCol = 3;
-  int numbersPerRow = 3;
+  int square_col = (col / 3) * 3;
+  int square_row = (row / 3) * 3;
+  int numbers_per_col = 3;
+  int numbers_per_row = 3;
 
-  for (int i = squareRow; i < (squareRow + numbersPerRow); i++) {
-    for (int j = squareCol; j < (squareCol + numbersPerCol); j++) {
+  for (int i = square_row; i < (square_row + numbers_per_row); i++) {
+    for (int j = square_col; j < (square_col + numbers_per_col); j++) {
       square[position] = grid[i][j];
       position++;
     }

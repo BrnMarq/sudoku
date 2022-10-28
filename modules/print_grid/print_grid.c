@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void print_grid(int grid[9][9]) {
+void print_grid(int **grid) {
   printf("  ");
   for (int i = 0; i < 9; i++) {
     if (i % 3 == 0) printf("|");
@@ -13,6 +13,10 @@ void print_grid(int grid[9][9]) {
     printf("%d ", row + 1);
     for (int col = 0; col < 9; col++) {
       if (col % 3 == 0) printf("|");
+      if (grid[row][col] == 0) {
+        printf("   ");
+        continue;
+      };
       printf(" %d ", grid[row][col]);
     }
     printf("| \n");
