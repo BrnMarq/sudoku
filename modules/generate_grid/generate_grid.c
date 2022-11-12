@@ -12,12 +12,12 @@ void generate_grid(int **grid, int amount_to_fill) {
   int row;
   int value;
   int *possibles;
-  // int **new_grid;
   int possibles_length;
 
   while (1) {
+    init_grid(grid);
+    // Se llena el grid en casillas aleatorias con sus soluciones posibles
     for (int i = 0; i < amount_to_fill; i++) {
-      // new_grid = copy_grid(grid);
       col = get_random(0, 9);
       row = get_random(0, 9);
       if (grid[row][col] != 0) {
@@ -31,6 +31,9 @@ void generate_grid(int **grid, int amount_to_fill) {
       value = possibles[get_random(0, possibles_length)];
       grid[row][col] = value;
     }
+
+    // Si existe la solución, se rompe el ciclo, sino, se vuelve a hacer
+    // hasta que haya un grid resolvible
     if (is_completed(solve(grid))) break;
   }
 }
